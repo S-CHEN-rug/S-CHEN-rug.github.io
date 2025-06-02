@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shuyi Chen | Voice Technology</title>
+  <script>
+    function toggleLanguage() {
+      document.body.classList.toggle('lang-zh');
+    }
+  </script>
+</head>
+<body>
+  <header style="overflow: auto;">
+    
+    <h1>Shuyi Chen / 陈淑怡</h1>
+    <p>MSc Voice Technology | University of Groningen</p>
+    <button onclick="toggleLanguage()">🌐 Switch Language / 切换语言</button>
+  </header>
+
+  <nav>
+    <a href="#about">About / 关于</a>
+    <a href="#project">Project / 项目</a>
+    <a href="#contact">Contact / 联系</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me / 关于我</h2>
+      <p class="en">I am a Master's student in Voice Technology at the University of Groningen, focusing on expressive and controllable Text-to-Speech systems.</p>
+      <p class="zh">我是在格罗宁根大学攻读语音技术硕士的学生，研究方向为可控与具表现力的语音合成系统。</p>
+    </section>
+
+    <section id="project">
+      <h2>Current Project / 当前项目</h2>
+      <h3>Enhancing Surprise Perception in TTS through Keyword-Level Prosody Control</h3>
+      <p class="en">This project proposes a prosody control framework to enhance surprise in synthesized speech using FastSpeech2 and HiFi-GAN.</p>
+      <p class="zh">本项目提出一种节奏控制框架，通过在关键词处调节音高与能量增强语音合成中的“惊讶”感知。</p>
+      <p><a href="your-thesis-pdf-link.pdf" target="_blank">📄 Download Thesis / 下载论文 (PDF)</a></p>
+      <p><a href="https://github.com/S-CHEN-rug" target="_blank">🔗 GitHub Repository / 项目代码</a></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact / 联系方式</h2>
+      <p>Email: <a href="mailto:s.chen@student.rug.nl">s.chen@student.rug.nl</a></p>
+      <p>GitHub: <a href="https://github.com/S-CHEN-rug" target="_blank">S-CHEN-rug</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Shuyi Chen. All rights reserved.</p>
+  </footer>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: white; color: black; }
+    header { background-color: #990000; color: white; padding: 2rem 1rem; text-align: center; }
+    nav { background: #000; display: flex; justify-content: center; gap: 1rem; padding: 0.5rem; }
+    nav a { color: white; text-decoration: none; padding: 0.5rem; }
+    nav a:hover { background: #990000; }
+    main { padding: 2rem; max-width: 900px; margin: auto; }
+    section { margin-bottom: 2rem; }
+    footer { background: #f1f1f1; text-align: center; padding: 1rem; font-size: 0.9rem; }
+    .zh { display: none; }
+    .lang-zh .en { display: none; }
+    .lang-zh .zh { display: block; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; background: #000; color: #fff; border: none; cursor: pointer; }
+    button:hover { background: #990000; }
+    
+  </style>
+</body>
+</html>
