@@ -14,7 +14,7 @@
 <body>
   <header style="overflow: auto;">
     
-    <h1>Shuyi Chen / 陈淑怡</h1>
+    <h1>Shuyi Chen / 陈姝伊</h1>
     <p>MSc Voice Technology | University of Groningen</p>
     <button onclick="toggleLanguage()">🌐 Switch Language / 切换语言</button>
   </header>
@@ -43,51 +43,9 @@
 
     <section id="contact">
       <h2>Contact / 联系方式</h2>
-      <p>Email: <a href="mailto:s.chen@student.rug.nl">s.chen@student.rug.nl</a></p>
+      <p>Email: <a href="mailto:s.chen@student.rug.nl">s.chen.66@student.rug.nl</a></p>
       <p>GitHub: <a href="https://github.com/S-CHEN-rug" target="_blank">S-CHEN-rug</a></p>
     </section>
-  
-
-<section id="overview">
-  <h2>Overview / 项目概述</h2>
-  <p>
-    This project investigates whether keyword-level pitch and energy control can enhance the perception of the emotion "surprise" in neural TTS systems.
-    A multilingual FastSpeech2-based TTS system is built and evaluated across two languages (Mandarin and English).<br/>
-    本项目探索是否可以通过对关键词的音高和能量控制来增强神经 TTS 系统中“惊讶”情绪的感知效果。
-    实验系统基于 FastSpeech2 模型，跨语言（中文和英文）进行构建与评估。
-  </p>
-</section>
-
-<section id="methodology">
-  <h2>Methodology / 方法设计</h2>
-  <p>
-    The study uses keyword pitch/energy scaling during inference without modifying the core architecture of FastSpeech2.
-    Surprise keywords were extracted using a GPT-based API, with prosody control applied via the variance adaptor.
-    In addition, several implementation improvements were made:<br/>
-    本研究在不更改 FastSpeech2 模型主结构的前提下，在推理阶段对关键词进行音高与能量增强控制。
-    惊讶关键词由 GPT 接口识别，并通过 variance adaptor 实现韵律控制。同时，本研究进行了以下改进：
-    <ul>
-      <li>🔍 Emotion keyword detection and tagging / 情绪关键词识别与标注</li>
-      <li>🎚️ Emotion type and intensity parameterization / 情绪类别与强度参数化</li>
-      <li>🎯 Smooth transition at keyword regions / 关键词区域的过渡平滑控制</li>
-      <li>📦 Batch structure updated to support keyword info / 批次结构更新以支持关键词标注</li>
-      <li>🎛️ Integration of smoothing in synthesis / 在合成阶段集成平滑控制</li>
-      <li>📉 1D convolution smoothing on mel-spectrogram / 对梅尔谱图进行一维卷积平滑</li>
-      <li>🔁 Integration of keyword smoothing in synth_samples / 在 synth_samples 中集成关键词平滑信息</li>
-    </ul>
-  </p>
-</section>
-
-<section id="results">
-  <h2>Results / 实验结果</h2>
-  <p>
-    Results from both forced-choice and scalar rating tests show that keyword-level control increases surprise perception significantly compared to baseline synthesis.
-    Cross-linguistic generalizability is demonstrated, though language-specific tuning is needed.<br/>
-    强制选择与连续评分测试均表明，关键词控制显著增强了“惊讶”情绪的感知效果。该方法在中英文中均显示良好泛化性，但需进行语言特定参数微调。
-  </p>
-</section>
-
-
 
 <div style="text-align:right; margin-bottom:1em;">
   <label for="langToggle">🌐 Language:</label>
@@ -159,48 +117,6 @@
     该方法在中英文中均显示良好泛化性，但需进行语言特定参数微调。</p>
   </div>
 </section>
-
-<section id="demo">
-  <h2>Audio Samples / 音频示例</h2>
-
-  <h3>📢 中文男声合成（5条）</h3>
-  <ul>
-    <li><audio controls src="audio/zh_male_01.mp3"></audio></li>
-    <li><audio controls src="audio/zh_male_02.mp3"></audio></li>
-    <li><audio controls src="audio/zh_male_03.mp3"></audio></li>
-    <li><audio controls src="audio/zh_male_04.mp3"></audio></li>
-    <li><audio controls src="audio/zh_male_05.mp3"></audio></li>
-  </ul>
-
-  <h3>📢 中文女声合成（5条）</h3>
-  <ul>
-    <li><audio controls src="audio/zh_female_01.mp3"></audio></li>
-    <li><audio controls src="audio/zh_female_02.mp3"></audio></li>
-    <li><audio controls src="audio/zh_female_03.mp3"></audio></li>
-    <li><audio controls src="audio/zh_female_04.mp3"></audio></li>
-    <li><audio controls src="audio/zh_female_05.mp3"></audio></li>
-  </ul>
-
-  <h3>📢 English Male Voice (5 clips)</h3>
-  <ul>
-    <li><audio controls src="audio/en_male_01.mp3"></audio></li>
-    <li><audio controls src="audio/en_male_02.mp3"></audio></li>
-    <li><audio controls src="audio/en_male_03.mp3"></audio></li>
-    <li><audio controls src="audio/en_male_04.mp3"></audio></li>
-    <li><audio controls src="audio/en_male_05.mp3"></audio></li>
-  </ul>
-
-  <h3>📢 English Female Voice (5 clips)</h3>
-  <ul>
-    <li><audio controls src="audio/en_female_01.mp3"></audio></li>
-    <li><audio controls src="audio/en_female_02.mp3"></audio></li>
-    <li><audio controls src="audio/en_female_03.mp3"></audio></li>
-    <li><audio controls src="audio/en_female_04.mp3"></audio></li>
-    <li><audio controls src="audio/en_female_05.mp3"></audio></li>
-  </ul>
-</section>
-
-
 
 <section id="overview">
   <h2>Overview / 项目概述</h2>
