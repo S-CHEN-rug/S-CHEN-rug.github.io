@@ -1,70 +1,297 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shuyi Chen | Voice Technology</title>
-  <script>
-    function toggleLanguage() {
-      document.body.classList.toggle('lang-zh');
-    }
-  </script>
+    <title>Enhancing Surprise Perception in TTS through Keyword-Level Prosody Control</title>
+    <style>
+        .header {
+            background-image: url('image/header.svg');
+            background-size: cover;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            padding-top: 80px; /* 调整标题的位置 */
+        }
+        .header h1 {
+            font-family: "Gill Sans", sans-serif;
+            font-size: 4em; /* 改变字体大小 */
+        }
+        .header p {
+            margin-top: 2px; /* 添加间距 */
+            font-size: 1.2em; /* 改变字体大小 */
+            text-align: center; /* 使文本居中 */
+            font-family: "Gill Sans", sans-serif;
+        }
+        .header a {
+            color: green; /* 改变链接颜色 */
+            text-decoration: none; /* 去掉下划线 */
+        }
+
+        .content {
+            font-family: "Gill Sans", sans-serif;
+            margin: 0 10%; /* 改变页面的左右边距 */
+        }
+
+        .content p {
+            font-size: 1.2em; /* 改变段落的字体大小 */
+            line-height: 1.2; /* 改变行间距 */
+        }
+        .content a {
+            color: green; /* 改变链接颜色 */
+            text-decoration: none; /* 去掉下划线 */
+        }
+        .audio-section {
+            margin-bottom: 40px; /* 添加底部间距 */
+        }
+        .audio-section h2 {
+            font-size: 2em; /* 改变标题的字体大小 */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed; /* 确保每列的宽度相等 */
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+            border: none;
+            width: 33.33%; /* 每个单元格占据表格宽度的三分之一 */
+            height: 100%; /* 确保单元格高度一致 */
+
+        }
+        .audio-container {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <header style="overflow: auto;">
-    
-    <h1>Shuyi Chen / 陈姝伊</h1>
-    <p>MSc Voice Technology | University of Groningen</p>
-  </header>
+    <div class="header">
+        <h1>Enhancing Surprise Perception in TTS through Keyword-Level Prosody Control</h1>
+        <p>This project proposes a prosody control framework to enhance surprise in synthesized speech using FastSpeech2 and HiFi-GAN.</a>.
+            <br>It is a master's thesis project for the MSc in Voice Technology at the <a href="https://www.rug.nl/">University of Groningen</a>.
+        <br>Here are some pre-generated audio demos.</p>
+    </div>
+    <div class="content">
+        <p>This study investigated whether keyword-level pitch and energy enhancement can effectively increase the perception of surprise in synthetic speech, and whether this effect generalizes across typologically distinct languages— English and Mandarin Chinese.  </a>
 
-  <nav>
-    <a href="#about">About </a>
-    <a href="#project">Project </a>
-    <a href="#contact">Contact </a>
-  </nav>
+        <div class="audio-section">
+            <h2>English</h2>
+            <table>
+                <tr>
+                    <td><p>1. You really, actually did it all by yourself?
+                        <br>
+                    <td><p>2. I can’t believe he seriously, truly meant that.
+                        <br>
+                    <td><p>3. Wait— she honestly just quit, like right now?
+                        <br>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Baseline:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/ref-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Mild:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/meta-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Moderate:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Strong:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </td>
+                    <td>
+                        <p>Baseline:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/ref-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Mild:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/meta-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Moderate:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Strong:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </td>
+                    <td>
+                        <p>Baseline:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/ref-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Mild:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/meta-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Moderate:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Strong:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </td>
+                </tr>
+            </table>            
+        </div>
 
-  <main>
-    <section id="about">
-      <h2>About Me </h2>
-      <p class="en">I am a Master's student in Voice Technology at the University of Groningen, focusing on expressive and controllable Text-to-Speech systems.</p>
-    </section>
-
-    <section id="project">
-      <h2>Current Project </h2>
-      <h3>Enhancing Surprise Perception in TTS through Keyword-Level Prosody Control</h3>
-      <p class="en">This project proposes a prosody control framework to enhance surprise in synthesized speech using FastSpeech2 and HiFi-GAN.</p>
-      <p><a href="your-thesis-pdf-link.pdf" target="_blank">📄 Download Thesis </a></p>
-      <p><a href="https://github.com/S-CHEN-rug" target="_blank">🔗 GitHub Repository</a></p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact </h2>
-      <p>Email: <a href="mailto:s.chen@student.rug.nl">s.chen.66@student.rug.nl</a></p>
-      <p>GitHub: <a href="https://github.com/S-CHEN-rug" target="_blank">S-CHEN-rug</a></p>
-    </section>
-
-</main>
-
-  <footer>
-    <p>&copy; 2025 Shuyi Chen. All rights reserved.</p>
-  </footer>
-
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: white; color: black; }
-    header { background-color: #990000; color: white; padding: 2rem 1rem; text-align: center; }
-    nav { background: #000; display: flex; justify-content: center; gap: 1rem; padding: 0.5rem; }
-    nav a { color: white; text-decoration: none; padding: 0.5rem; }
-    nav a:hover { background: #990000; }
-    main { padding: 2rem; max-width: 900px; margin: auto; }
-    section { margin-bottom: 2rem; }
-    footer { background: #f1f1f1; text-align: center; padding: 1rem; font-size: 0.9rem; }
-    .zh { display: none; }
-    .lang-zh .en { display: none; }
-    .lang-zh .zh { display: block; }
-    button { margin-top: 1rem; padding: 0.5rem 1rem; background: #000; color: #fff; border: none; cursor: pointer; }
-    button:hover { background: #990000; }
-    
-  </style>
+        <div class="audio-section">
+            <h2>Mandarin Chinese</h2>
+            <table>
+                <tr>
+                    <td>
+                        <p>1. 你真的居然毫无准备就上台演讲了？</p>
+                    </td>
+                    <td>
+                        <p>2. 我简直不敢相信他竟然还记得我的名字。</p>
+                    </td>
+                    <td>
+                        <p>3.她竟然当众毫无征兆地说出了那个秘密。</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Baseline:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/ref-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Mild:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/meta-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Moderate:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Strong:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </td>
+                    <td>
+                        <p>Baseline:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/ref-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Mild:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/meta-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Moderate:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Strong:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </td>
+                    <td>
+                        <p>Baseline:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/ref-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Mild:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/meta-fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Moderate:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <p>Emotion level - Strong:</p>
+                        <div class="audio-container">
+                            <audio controls>
+                                <source src="audio/fi-0018.wav" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </td>
+                </tr>
+            </table>            
+        </div>          
+    </div>
 </body>
 </html>
